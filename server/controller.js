@@ -91,7 +91,7 @@ exports.addSeason = function (req, res) {
 
 const addNewSeasonDetails = function(season) {
     let topSixteen = [...countries].sort((a,b)=>a.rank-b.rank).slice(0,16);
-    let blankSeason = {...blankSeasonDetails};
+    let blankSeason = JSON.parse(JSON.stringify(blankSeasonDetails));
     blankSeason.roundOf16.forEach((o) => {
         o.id = generateUuid();
     });
