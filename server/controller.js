@@ -107,17 +107,17 @@ const addNewSeasonDetails = function(season) {
     blankSeason.name = season.name;
     topSixteen.forEach((c, index) => {
         if(index%2==0) {
-            let teamOne = {...blankTeam};
+            let teamOne = JSON.parse(JSON.stringify(blankTeam));
             teamOne.name = c.name;
             teamOne.rank = c.rank;
-            let teamTwo = {...blankTeam};
+            let teamTwo = JSON.parse(JSON.stringify(blankTeam));
             teamTwo.name = topSixteen[index+1].name;
             teamTwo.rank = topSixteen[index+1].rank;
-            blankSeason.roundOf16[index/2]['teamOne'] = {...teamOne};
-            blankSeason.roundOf16[index/2]['teamTwo'] = {...teamTwo};
+            blankSeason.roundOf16[index/2]['teamOne'] = JSON.parse(JSON.stringify(teamOne));
+            blankSeason.roundOf16[index/2]['teamTwo'] = JSON.parse(JSON.stringify(teamTwo));
         }
     });
-    seasonDetails.push({...blankSeason});
+    seasonDetails.push(JSON.parse(JSON.stringify(blankSeason)));
 }
 
 const updateSeasonDetails = function(matchDetails) {
@@ -774,64 +774,64 @@ const blankSeasonDetails = {
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 2,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 3,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 4,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 5,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 6,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 7,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 8,
                     "stage": "Round of 16",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 }
             ],
             "quarterFinals": [
@@ -840,32 +840,32 @@ const blankSeasonDetails = {
                     "stage": "Quarter Final",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 2,
                     "stage": "Quarter Final",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 3,
                     "stage": "Quarter Final",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 4,
                     "stage": "Quarter Final",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 }
             ],
             "semiFinals": [
@@ -874,16 +874,16 @@ const blankSeasonDetails = {
                     "stage": "Semi Final",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 },
                 {
                     "matchNumber": 2,
                     "stage": "Semi Final",
                     "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
                 }
             ],
             "final": {
@@ -891,8 +891,8 @@ const blankSeasonDetails = {
                 "stage": "Final",
                 "date": "",
                     "status": "Inprogress",
-                    "teamOne": {...blankTeam},
-                    "teamTwo": {...blankTeam}
+                    "teamOne": JSON.parse(JSON.stringify(blankTeam)),
+                    "teamTwo": JSON.parse(JSON.stringify(blankTeam))
             }
 }
 
